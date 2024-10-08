@@ -3,7 +3,7 @@ FROM alpine:latest
 ARG KIND_VERSION=0.24.0
 ENV KUBE_EDITOR=vim
 
-RUN apk add --no-cache curl docker-cli bash vim libcap
+RUN apk add --no-cache curl docker-cli bash vim libcap ripgrep
 
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 RUN chmod +x ./kubectl
